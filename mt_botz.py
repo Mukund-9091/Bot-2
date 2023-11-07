@@ -7,7 +7,7 @@ logging.getLogger().setLevel(logging.ERROR)
 
 from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
-from LuciferMoringstar_Robot import Media
+# from LuciferMoringstar_Robot import Media
 from Config import SESSION, API_ID, API_HASH, BOT_TOKEN
 import pyromod.listen
 
@@ -26,7 +26,7 @@ class Bot(Client):
 
     async def start(self):
         await super().start()
-        await Media.ensure_indexes()
+        # await Media.ensure_indexes()
         me = await self.get_me()
         self.username = '@' + me.username
         print(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
